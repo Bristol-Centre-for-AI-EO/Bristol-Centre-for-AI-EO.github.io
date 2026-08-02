@@ -358,6 +358,46 @@ main p {
   word-break: break-word;
 }
 
+/* Key publications */
+.pub-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.pub-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.pub-item:last-child {
+  border-bottom: 0;
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.pub-title:hover {
+  text-decoration: underline;
+}
+
+.pub-authors {
+  font-size: 0.92rem;
+  color: #555555;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.pub-source {
+  font-size: 0.88rem;
+  color: #777777;
+  margin-top: 3px;
+}
+
 /* Collaboration map */
 .map-wrap {
   position: relative;
