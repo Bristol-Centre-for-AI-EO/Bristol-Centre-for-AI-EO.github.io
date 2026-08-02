@@ -118,23 +118,23 @@
     // Southern latitudes and western longitudes are negative.
     // ---------------------------------------------------------------
     const COLLABORATIONS = [
-      { name: 'Italy',             lat:  42.83, lon:  12.83 },
-      { name: 'France',            lat:  46.60, lon:   2.40 },
-      { name: 'California, USA',   lat:  36.78, lon: -119.42 },
-      { name: 'Japan',             lat:  36.20, lon: 138.25 },
+      { name: 'Italy',             lat:  41.83, lon:  11.83 },
+      { name: 'France',            lat:  46.60, lon:   1.40 },
+      { name: 'California, USA',   lat:  40.78, lon: -119.42 },
+      { name: 'Japan',             lat:  40.20, lon: 138.25 },
       { name: 'New York, USA',     lat:  40.71, lon: -74.01 },
-      { name: 'Spain',             lat:  40.24, lon:  -3.70 },
-      { name: 'New Zealand',       lat: -41.00, lon: 174.00 },
+      { name: 'Spain',             lat:  39.24, lon:  -3.70 },
+      { name: 'New Zealand',       lat: -50.00, lon: 170.00 },
       { name: 'Ithaca, USA',       lat:  42.44, lon: -76.50 },
       { name: 'Massachusetts, USA',lat:  42.40, lon: -71.38 },
       { name: 'Germany',           lat:  48.074, lon: 11.24 },
-      { name: 'Montserrat',        lat:  16.74, lon: -62.18 },
-      { name: 'Trinidad & Tobago', lat:  10.64, lon: -61.51 },
+      { name: 'Montserrat',        lat:  16.74, lon: -65.18 },
+      { name: 'Trinidad & Tobago', lat:  10.64, lon: -63.51 },
       { name: 'Belgium',           lat:  50.50, lon: 4.469 },
       { name: 'Switzerland',       lat:  46.81, lon: 8.23 }
     ];
 
-    const HOME = { name: 'Bristol, UK', lat: 51.46, lon: -2.60 };
+    const HOME = { name: 'Bristol, UK', lat: 50.46, lon: -2.90 };
 
     // Converts latitude/longitude to a position on img/world-map.svg, as a
     // percentage of the image. These four numbers were calibrated by fitting
@@ -142,7 +142,7 @@
     // hold for it — recalibrate if you swap the map for a different one.
     const CALIBRATION = {
       lonScale:  0.280987, lonOffset: 48.00778,   // left%  = lon * lonScale + lonOffset
-      latScale: -0.633883, latOffset: 62.18687    // top%   = lat * latScale + latOffset
+      latScale: -0.601883, latOffset: 62.18687    // top%   = lat * latScale + latOffset
     };
 
     function project(lat, lon) {
