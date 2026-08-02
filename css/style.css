@@ -186,6 +186,135 @@ main p {
   background: #f7f7f7;
 }
 
+/* People page */
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 28px;
+}
+
+.chip {
+  font-size: 0.85rem;
+  padding: 4px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #f5f5f5;
+  color: #555555;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.chip.active {
+  background: var(--teal);
+  color: #ffffff;
+  border-color: var(--teal);
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px;
+  margin: 20px 0 10px;
+}
+
+.people-card {
+  text-align: center;
+}
+
+.people-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 6px;
+  background: #f5f5f5;
+  display: block;
+}
+
+.people-card a {
+  text-decoration: none;
+}
+
+.people-name {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.people-card a:hover .people-name {
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.people-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.people-tag {
+  font-size: 0.7rem;
+  padding: 1px 7px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.people-tag.tag-satellite { color: #8e4a76; }
+.people-tag.tag-insar     { color: #3f7752; }
+.people-tag.tag-sar       { color: #5546b3; }
+.people-tag.tag-volcano   { color: #a83e21; }
+.people-tag.tag-flood     { color: #1c6580; }
+.people-tag.tag-forest    { color: #2b6129; }
+.people-tag.tag-glacier   { color: #5e3b1d; }
+
+/* School badges: filled, to read as a distinct set from the outlined topic tags */
+.people-school {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-top: 5px;
+}
+
+.people-school.school-biological   { background: #e6f0e4; color: #35602d; }
+.people-school.school-computer     { background: #e8eef8; color: #2d4a76; }
+.people-school.school-earth        { background: #f5eee2; color: #6f5122; }
+.people-school.school-eem          { background: #eee8f4; color: #533b6b; }
+.people-school.school-geographical { background: #e3f0f1; color: #255760; }
+
+.chip-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: -20px;
+}
+
+.chip-row-label {
+  font-size: 1rem;
+  color: #777777;
+  min-width: 104px;
+}
+
+.people-sep {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 28px 0;
+}
+
 /* Footer */
 footer {
   border-top: 3px solid var(--gold);
@@ -240,5 +369,10 @@ footer .container {
 
   .events-table td:first-child {
     width: auto;
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px;
   }
 }
