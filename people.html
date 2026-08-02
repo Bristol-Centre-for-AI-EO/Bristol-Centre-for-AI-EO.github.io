@@ -37,7 +37,19 @@
     <div class="container">
 
       <div class="chip-row">
-        <span class="chip-row-label">Research topic</span>
+        <!-- <span class="chip-row-label">School</span> -->
+        <div class="filter-chips">
+          <span class="chip active" data-group="school" data-filter="all">All</span>
+          <span class="chip" data-group="school" data-filter="biological">Biological Sciences</span>
+          <span class="chip" data-group="school" data-filter="computer">Computer Science</span>
+          <span class="chip" data-group="school" data-filter="earth">Earth Sciences</span>
+          <span class="chip" data-group="school" data-filter="eem">EEM Engineering</span>
+          <span class="chip" data-group="school" data-filter="geographical">Geographical Sciences</span>
+        </div>
+      </div>
+
+      <div class="chip-row">
+        <!-- <span class="chip-row-label">Research topic</span> -->
         <div class="filter-chips">
           <span class="chip active" data-group="topic" data-filter="all">All</span>
           <span class="chip" data-group="topic" data-filter="insar">InSAR</span>
@@ -47,18 +59,6 @@
           <span class="chip" data-group="topic" data-filter="sar">SAR</span>
           <span class="chip" data-group="topic" data-filter="satellite">Satellite</span>
           <span class="chip" data-group="topic" data-filter="volcano">Volcano</span>
-        </div>
-      </div>
-
-      <div class="chip-row">
-        <span class="chip-row-label">School</span>
-        <div class="filter-chips">
-          <span class="chip active" data-group="school" data-filter="all">All</span>
-          <span class="chip" data-group="school" data-filter="biological">Biological Sciences</span>
-          <span class="chip" data-group="school" data-filter="computer">Computer Science</span>
-          <span class="chip" data-group="school" data-filter="earth">Earth Sciences</span>
-          <span class="chip" data-group="school" data-filter="eem">EEM Engineering</span>
-          <span class="chip" data-group="school" data-filter="geographical">Geographical Sciences</span>
         </div>
       </div>
 
@@ -73,8 +73,8 @@
               <img src="people/Alin%20Achim.jpg" alt="Alin Achim">
               <div class="people-name">Alin Achim</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-sar">SAR</span><span class="people-tag tag-flood">Flood</span></div>
             <span class="people-school school-computer">Computer Science</span>
+            <div class="people-tags"><span class="people-tag tag-sar">SAR</span><span class="people-tag tag-flood">Flood</span></div>
           </div>
           <!---------- Pui ---------->
           <div class="people-card" data-tags="insar volcano" data-schools="computer">
@@ -82,8 +82,8 @@
               <img src="people/Pui%20Anantrasirichai.jpg" alt="Pui Anantrasirichai">
               <div class="people-name">Pui Anantrasirichai</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
             <span class="people-school school-computer">Computer Science</span>
+            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
           </div>
           <!---------- Andrew ---------->
           <div class="people-card" data-tags="sar" data-schools="eem">
@@ -91,8 +91,8 @@
               <img src="people/Andrew%20Austin.jpg" alt="Andrew Austin">
               <div class="people-name">Andrew Austin</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-sar">SAR</span></div>
             <span class="people-school school-eem">EEM Engineering</span>
+            <div class="people-tags"><span class="people-tag tag-sar">SAR</span></div>
           </div>
           <!---------- Jonathan ---------->
           <div class="people-card" data-tags="satellite glacier" data-schools="geographical">
@@ -100,8 +100,8 @@
               <img src="people/Jonathan%20Bamber.jpg" alt="Jonathan Bamber">
               <div class="people-name">Jonathan Bamber</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-glacier">Glacier</span></div>
             <span class="people-school school-geographical">Geographical Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-glacier">Glacier</span></div>
           </div>
           <!---------- Paul ---------->
           <div class="people-card" data-tags="flood" data-schools="geographical">
@@ -109,8 +109,8 @@
               <img src="people/Paul%20Bates.jpg" alt="Paul Bates">
               <div class="people-name">Paul Bates</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-flood">Flood</span></div>
             <span class="people-school school-geographical">Geographical Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-flood">Flood</span></div>
           </div>
           <!---------- Juliet ---------->
           <div class="people-card" data-tags="insar volcano" data-schools="earth">
@@ -118,26 +118,26 @@
               <img src="people/Juliet%20Bigg.jpg" alt="Juliet Biggs">
               <div class="people-name">Juliet Biggs</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
             <span class="people-school school-earth">Earth Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
           </div>
           <!---------- Jeffrey Neal ---------->
-          <div class="people-card" data-tags="forest">
+          <div class="people-card" data-tags="forest" data-schools="geographical">
             <a href="https://research-information.bris.ac.uk/en/persons/jeff-neal/" target="_blank" rel="noopener">
               <img src="people/Jeffrey%20Neal.jpg" alt="Jeffrey Neal">
               <div class="people-name">Jeffrey Neal</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span><span class="people-tag tag-flood">Flood</span></div>
             <span class="people-school school-geographical">Geographical Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span><span class="people-tag tag-flood">Flood</span></div>
           </div>
           <!---------- Tommaso ---------->
-          <div class="people-card" data-tags="forest">
+          <div class="people-card" data-tags="forest" data-schools="biological">
             <a href="https://research-information.bris.ac.uk/en/persons/tommaso-jucker/" target="_blank" rel="noopener">
               <img src="people/Tommaso%20Jucker.jpg" alt="Tommaso Jucker">
               <div class="people-name">Tommaso Jucker</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span><span class="people-tag tag-flood">Flood</span></div>
             <span class="people-school school-biological">Biological Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span></div>
           </div>
           <!---------- Ce ---------->
           <div class="people-card" data-tags="satellite forest flood" data-schools="geographical">
@@ -145,8 +145,8 @@
               <img src="people/Ce%20Zhang.jpg" alt="Ce Zhang">
               <div class="people-name">Ce Zhang</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span><span class="people-tag tag-flood">Flood</span></div>
             <span class="people-school school-geographical">Geographical Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span><span class="people-tag tag-flood">Flood</span></div>
           </div>
         </div>
       </div>
@@ -156,13 +156,14 @@
       <div class="people-section">
         <h2>Researchers</h2>
         <div class="people-grid">
+          <!---------- Edna ---------->
           <div class="people-card" data-tags="insar volcano" data-schools="earth">
             <a href="https://research-information.bris.ac.uk/en/persons/edna-dualeh/" target="_blank" rel="noopener">
               <img src="people/Edna%20Dualeh.jpg" alt="Edna Dualeh">
               <div class="people-name">Edna Dualeh</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
             <span class="people-school school-earth">Earth Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
           </div>
         </div>
       </div>
@@ -172,29 +173,41 @@
       <div class="people-section">
         <h2>PhD Students</h2>
         <div class="people-grid">
+          <!---------- James ---------->
           <div class="people-card" data-tags="satellite forest" data-schools="computer">
             <a href="https://research-information.bris.ac.uk/en/persons/james-brock/" target="_blank" rel="noopener">
               <img src="people/James%20Brock.jpg" alt="James Brock">
               <div class="people-name">James Brock</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span></div>
             <span class="people-school school-computer">Computer Science</span>
+            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span><span class="people-tag tag-forest">Forest</span></div>
           </div>
+          <!---------- Ben ---------->
+          <div class="people-card" data-tags="insar volcano" data-schools="earth">
+            <a href="https://research-information.bris.ac.uk/en/persons/ben-ireland/" target="_blank" rel="noopener">
+              <img src="people/Ben%20Ireland.jpg" alt="Ben Ireland">
+              <div class="people-name">Ben Ireland</div>
+            </a>
+            <span class="people-school school-earth">Earth Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
+          </div>
+          <!---------- Robert ---------->
           <div class="people-card" data-tags="insar volcano" data-schools="computer">
             <a href="https://research-information.bris.ac.uk/en/persons/robert-g-popescu/" target="_blank" rel="noopener">
               <img src="people/Robert%20Popescu.jpg" alt="Robert Popescu">
               <div class="people-name">Robert Popescu</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
             <span class="people-school school-computer">Computer Science</span>
+            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span><span class="people-tag tag-volcano">Volcano</span></div>
           </div>
+          <!---------- Yijia ---------->
           <div class="people-card" data-tags="insar" data-schools="computer">
             <a href="https://research-information.bris.ac.uk/en/persons/yijia-song/" target="_blank" rel="noopener">
               <img src="people/Yijia%20Song.jpg" alt="Yijia Song">
               <div class="people-name">Yijia Song</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span></div>
             <span class="people-school school-computer">Computer Science</span>
+            <div class="people-tags"><span class="people-tag tag-insar">InSAR</span></div>
           </div>
         </div>
       </div>
@@ -209,8 +222,8 @@
               <img src="people/Bole%20Zhang.jpg" alt="Bole Zhang">
               <div class="people-name">Bole Zhang</div>
             </a>
-            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span></div>
             <span class="people-school school-geographical">Geographical Sciences</span>
+            <div class="people-tags"><span class="people-tag tag-satellite">Satellite</span></div>
           </div>
         </div>
       </div>
