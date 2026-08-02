@@ -23,6 +23,30 @@ body {
   padding: 0 24px;
 }
 
+/* Satellite watermark spanning the header and main content */
+.page-top {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/satellite-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: right -65px top -110px;
+  background-size: 1000px 1000px;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-top > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* Header */
 header {
   border-bottom: 3px solid var(--gold);
@@ -179,6 +203,11 @@ footer .container {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .page-top::before {
+    background-size: 320px 320px;
+    background-position: right -40px center;
   }
 
   .site-title img {
