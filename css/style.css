@@ -403,8 +403,6 @@ main p {
   position: relative;
   margin: 24px 0 8px;
   line-height: 0;
-  background: #ffffff;
-  border-radius: 6px;
 }
 
 .map-base {
