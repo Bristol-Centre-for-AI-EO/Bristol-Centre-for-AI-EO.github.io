@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bristol Centre for AI &amp; EO</title>
+  <style>
+    :root {
+      --teal: #2e6587;
+      --gold: #D9A441;
+      --brick: #B22222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Myriad Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    .site-title {
+      font-size: 4rem;
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+    }
+
+    .site-title .bristol { color: var(--brick); }
+    .site-title .centre  { color: var(--gold); }
+    .site-title .for     { color: #000000; font-weight: 500; }
+    .site-title .aieo    { color: var(--teal); }
+
+    .logo img {
+      height: 72px;
+      width: auto;
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* Tab menu */
+    nav {
+      background: var(--teal);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+    }
+
+    .tabs a {
+      display: block;
+      padding: 14px 28px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+      transition: background 0.2s ease;
+    }
+
+    .tabs a:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .tabs a.active {
+      background: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Main content */
+    main {
+      padding: 48px 0;
+    }
+
+    main h2 {
+      color: var(--teal);
+      font-size: 1.7rem;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    main p {
+      font-size: 1.15rem;
+      color: #333333;
+    }
+
+    .about-body {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    .about-body p {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about-figure {
+      flex: 0 0 260px;
+      margin-left: auto;
+      margin-right: 16px;
+    }
+
+    .about-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 3px solid var(--gold);
+      margin-top: 0px;
+    }
+
+    footer .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 0.9rem;
+      color: #666666;
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo img {
+        height: 48px;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+      }
+
+      .tabs a {
+        padding: 12px 18px;
+      }
+
+      .about-body {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .about-figure {
+        flex: 1 1 auto;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title">
+        <span class="bristol">Bristol</span>
+        <span class="centre">Centre</span><br>
+        <span class="for">for</span>
+        <span class="aieo">AI &amp; EO</span>
+      </h1>
+      <div class="logo">
+        <img src="uob-logo.svg" alt="University of Bristol logo">
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul class="tabs">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <h2>About &amp; Vision</h2>
+      <div class="about-body">
+        <p>
+          We are the Bristol Centre for Artificial Intelligence (AI) and Earth Observation (EO), a multidisciplinary research group spanning the Faculty of Science and Engineering at the University of Bristol. We are the Bristol Centre for Artificial Intelligence (AI) and Earth Observation (EO), a multidisciplinary research group spanning the Faculty of Science and Engineering at the University of Bristol. We are the Bristol Centre for Artificial Intelligence (AI) and Earth Observation (EO), a multidisciplinary research group spanning the Faculty of Science and Engineering at the University of Bristol. We are the Bristol Centre for Artificial Intelligence (AI) and Earth Observation (EO), a multidisciplinary research group spanning the Faculty of Science and Engineering at the University of Bristol.
+        </p>
+        <figure class="about-figure">
+          <img src="img/teaser.jpg" alt="Bristol Centre for AI and Earth Observation">
+        </figure>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Bristol Centre for AI &amp; EO &middot; University of Bristol
+    </div>
+  </footer>
+
+</body>
+</html>
