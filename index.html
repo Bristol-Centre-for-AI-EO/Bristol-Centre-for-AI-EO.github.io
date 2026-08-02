@@ -45,18 +45,12 @@
       padding-bottom: 28px;
     }
 
-    .site-title {
-      font-size: 4rem;
-      font-weight: 700;
-      text-align: left;
-      letter-spacing: 0.5px;
-      line-height: 1.15;
+    .site-title img {
+      display: block;
+      height: 120px;
+      width: auto;
+      max-width: 100%;
     }
-
-    .site-title .bristol { color: var(--brick); }
-    .site-title .centre  { color: var(--gold); }
-    .site-title .for     { color: #000000; font-weight: 500; }
-    .site-title .aieo    { color: var(--teal); }
 
     .logo img {
       height: 72px;
@@ -157,6 +151,11 @@
         align-items: flex-start;
       }
 
+      .site-title img {
+        height: auto;
+        width: 100%;
+      }
+
       .logo img {
         height: 48px;
       }
@@ -187,10 +186,7 @@
   <header>
     <div class="container header-inner">
       <h1 class="site-title">
-        <span class="bristol">Bristol</span>
-        <span class="centre">Centre</span><br>
-        <span class="for">for</span>
-        <span class="aieo">AI &amp; EO</span>
+        <img src="BristolAIEO_logo.png" alt="Bristol Centre for AI &amp; EO — Artificial Intelligence &amp; Earth Observation">
       </h1>
       <div class="logo">
         <img src="uob-logo.svg" alt="University of Bristol logo">
