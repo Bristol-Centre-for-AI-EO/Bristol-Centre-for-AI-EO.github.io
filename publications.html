@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications and Collaborations &mdash; Bristol Centre for AI &amp; EO</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-top">
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title">
+        <img src="BristolAIEO_logo.png" alt="Bristol Centre for AI &amp; EO — Artificial Intelligence &amp; Earth Observation">
+      </h1>
+      <div class="logo">
+        <img src="uob-logo.svg" alt="University of Bristol logo">
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul class="tabs">
+        <li><a href="index.html">About</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <h2>Publications and Collaborations</h2>
+
+      <div class="map-wrap">
+        <img class="map-base" src="img/world-map.svg" alt="World map showing our international collaborations">
+        <div id="map-markers"></div>
+      </div>
+
+      <div class="map-legend">
+        <span><i class="key-home"></i> Bristol</span>
+        <span><i class="key-collab"></i> Collaboration</span>
+      </div>
+
+      <ul class="map-places" id="map-places"></ul>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Bristol Centre for AI &amp; EO &middot; University of Bristol
+    </div>
+  </footer>
+
+  </div>
+
+  <script>
+    // ---------------------------------------------------------------
+    // To add a collaboration, add one line below: name, latitude, longitude.
+    // Look a place up at https://www.latlong.net if you need its coordinates.
+    // Southern latitudes and western longitudes are negative.
+    // ---------------------------------------------------------------
+    const COLLABORATIONS = [
+      { name: 'Italy',             lat:  42.83, lon:  12.83 },
+      { name: 'France',            lat:  46.60, lon:   2.40 },
+      { name: 'California, USA',   lat:  36.78, lon: -119.42 },
+      { name: 'Japan',             lat:  36.20, lon: 138.25 },
+      { name: 'New York, USA',     lat:  40.71, lon: -74.01 },
+      { name: 'Spain',             lat:  40.24, lon:  -3.70 },
+      { name: 'New Zealand',       lat: -41.00, lon: 174.00 },
+      { name: 'Ithaca, USA',       lat:  42.44, lon: -76.50 }
+    ];
+
+    const HOME = { name: 'Bristol, UK', lat: 51.46, lon: -2.60 };
+
+    // Converts latitude/longitude to a position on img/world-map.svg, as a
+    // percentage of the image. These four numbers were calibrated by fitting
+    // the known positions of 45 islands in that specific map file, so they only
+    // hold for it — recalibrate if you swap the map for a different one.
+    const CALIBRATION = {
+      lonScale:  0.280987, lonOffset: 48.00778,   // left%  = lon * lonScale + lonOffset
+      latScale: -0.558226, latOffset: 54.76457    // top%   = lat * latScale + latOffset
+    };
+
+    function project(lat, lon) {
+      return {
+        left: lon * CALIBRATION.lonScale + CALIBRATION.lonOffset,
+        top:  lat * CALIBRATION.latScale + CALIBRATION.latOffset
+      };
+    }
+
+    function addMarker(place, isHome) {
+      const { left, top } = project(place.lat, place.lon);
+      const el = document.createElement('div');
+      el.className = 'map-marker' + (isHome ? ' map-home' : '');
+      el.style.left = left.toFixed(3) + '%';
+      el.style.top = top.toFixed(3) + '%';
+      el.title = place.name;
+      document.getElementById('map-markers').appendChild(el);
+    }
+
+    addMarker(HOME, true);
+    COLLABORATIONS.forEach(p => addMarker(p, false));
+
+    // Text list beneath the map, so the places are readable without the image
+    const list = document.getElementById('map-places');
+    COLLABORATIONS.forEach(p => {
+      const li = document.createElement('li');
+      li.textContent = p.name;
+      list.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>
