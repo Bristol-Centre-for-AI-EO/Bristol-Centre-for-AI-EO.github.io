@@ -315,6 +315,49 @@ main p {
   margin: 28px 0;
 }
 
+/* Projects page */
+.project-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.72);
+  transition: border-color 0.15s;
+}
+
+.project-card:hover {
+  border-color: var(--teal);
+}
+
+.project-card a {
+  display: block;
+  padding: 18px 20px;
+  text-decoration: none;
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--teal);
+  line-height: 1.4;
+}
+
+.project-card a:hover .project-title {
+  text-decoration: underline;
+}
+
+.project-link {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #777777;
+  word-break: break-word;
+}
+
 /* Footer */
 footer {
   border-top: 3px solid var(--gold);
