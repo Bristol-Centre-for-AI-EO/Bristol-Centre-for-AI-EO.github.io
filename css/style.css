@@ -425,31 +425,6 @@ main p {
 .map-legend i.key-collab { background: var(--brick); }
 .map-legend i.key-home   { background: #1a1a1a; }
 
-.map-places {
-  columns: 3 190px;
-  column-gap: 24px;
-  font-size: 0.95rem;
-  color: #444444;
-  list-style: none;
-  margin-bottom: 8px;
-}
-
-.map-places li {
-  padding: 3px 0;
-  break-inside: avoid;
-}
-
-.map-places li::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--brick);
-  margin-right: 9px;
-  vertical-align: 1px;
-}
-
 @media (max-width: 640px) {
   .map-marker {
     width: 14px;
