@@ -121,7 +121,7 @@ main h2 {
 }
 
 main p {
-  font-size: 1.15rem;
+  font-size: 1.0rem;
   color: #333333;
 }
 
@@ -131,9 +131,32 @@ main p {
   gap: 32px;
 }
 
-.about-body p {
+.about-text {
   flex: 1;
   min-width: 0;
+}
+
+.about-text p + p {
+  margin-top: 1em;
+}
+
+/* Inline links: identical before and after visiting */
+.about-text a,
+.about-text a:link,
+.about-text a:visited,
+.about-text a:hover,
+.about-text a:active,
+.about-text a:focus {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+/* Non-colour cue on hover/focus — teal on body grey is only 2:1, so colour
+   alone does not distinguish these links (WCAG 1.4.1). Delete to make the
+   links completely static. */
+.about-text a:hover,
+.about-text a:focus-visible {
+  text-decoration: underline;
 }
 
 .about-figure {
